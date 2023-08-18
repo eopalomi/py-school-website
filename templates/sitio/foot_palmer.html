@@ -1,0 +1,72 @@
+<!-- Pie de pagina -->
+<footer class="text-white py-3 small text-center text-md-center">
+    <section class="barra-contacto text-light py-2">
+      <div class="container">
+        <div class="row justify-content-center">  
+           
+          <div class="col-12 col-md-4 col-lg-4">
+              Urbanización Los reyes, Mz. C Lt. 9<br>
+              San Martín de Porres<br>
+              www.palmerschool.edu.pe<br>
+              <a href="https://www.facebook.com/palmerschool" target="_blank"><i class="social__icon fab fa-facebook fa-3x mb-4"></i></a>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+            Contáctanos<br>
+            Libro de Satisfacciones<br>
+            Trabaja con nosotros<br>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+            I.E.P. Palmer School<br>
+            Copyright 2023 - Todos los Derechos Reservados
+          </div>
+        </div>
+        <hr>
+      </div>      
+    </section>
+  </footer>
+
+    <!-- CARGAR DE JQUERY -->
+    <script src="{{ url_for('static', filename='/js/jquery-3.3.1.min.js') }}"></script>
+    <!-- CARGA DE POPPER JS NECESARIO PARA EL COMPONENTE DROPDOWN -->
+    <script src="{{ url_for('static', filename='/js/popper.min.js') }}"></script>
+    <!-- CARGA DE BOOTSTRAP JS -->
+    <script src="{{ url_for('static', filename='/js/bootstrap.min.js') }}"></script>
+    <!-- CARGA DE TYPED.JS -->
+    <script src="{{ url_for('static', filename='/js/typed.min.js') }}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        AOS.init();
+    
+        $(document).ready(function(){
+          
+          /*Función 1: Megamenu se mantiene visible*/
+          $('.mega-menu .dropdown-menu').click(function(n){
+            n.stopPropagation();
+          });
+      
+          /*Función 2: Mostar y ocultar ventana modal del buscador*/
+          $('.btn-buscar').click(function(){
+            $('#buscador-modal').fadeIn();
+          });
+      
+          $('.btn-cerrar').click(function(){
+            $('#buscador-modal').fadeOut();
+          });
+      
+          /*Función 3: Iniciamos el script Typed.js*/
+             var typed = new Typed('.typed', {
+                strings: ["Brindar Educación de Calidad", "Formar Ciudadanos del Futuro","Inspirar, Enseñar, Transformar"],
+                smartBackspace: false,
+                loop: true,
+                showCursor:true,
+                cursorChar:"|",
+                typeSpeed: 50,
+                backSpeed: 30,
+                startDelay:800
+                });
+        });
+    </script>
+  
+</body>
